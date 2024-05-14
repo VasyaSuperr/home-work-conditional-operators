@@ -30,35 +30,77 @@
 // alert(notificationsAboutOnline);
 
 //===============================================================================
-console.log("// 3");
-let inputSomeNumber = null;
-let discount = null;
+// console.log("// 3");
+// let inputSomeNumber = null;
+// let discount = null;
+
+// do {
+//   inputSomeNumber = +prompt("Enter the purchase amount: ", "1000");
+// } while (!Number.isFinite(inputSomeNumber));
+
+// if (inputSomeNumber >= 0 && inputSomeNumber < 500) {
+//   discount = 0;
+// } else if (inputSomeNumber >= 500 && inputSomeNumber < 800) {
+//   discount = 0.03;
+// } else if (inputSomeNumber >= 800) {
+//   discount = 0.05;
+// }
+
+// // false, null, undefined, '', NaN, 0/-0 - falsy - значення
+// if (inputSomeNumber > 0) {
+//   console.log(
+//     `Ваша сума товарів складає ${inputSomeNumber}, враховуючи знижку, яка складає ${
+//       discount * 100
+//     }% ваша сума буде дорівнювати ${
+//       inputSomeNumber - inputSomeNumber * discount
+//     }`
+//   );
+// } else if (inputSomeNumber === 0) {
+//   // нічого не купили
+//   console.log("Може бажаєте щось купити?");
+// } else {
+//   // наприклад, розбили певний товар в магазині
+//   console.log("Сплатіть штраф !!!");
+// }
+
+console.log("Завдання на switch..case");
+console.log("// 1");
+
+let inputNumberDayWeek = null;
+let dayWeek = null;
 
 do {
-  inputSomeNumber = +prompt("Enter the purchase amount: ", "1000");
-} while (!Number.isFinite(inputSomeNumber));
+  inputNumberDayWeek = +prompt("Введіть номер дня тижня: ", "7");
+} while (!Number.isFinite(inputNumberDayWeek));
 
-if (inputSomeNumber >= 0 && inputSomeNumber < 500) {
-  discount = 0;
-} else if (inputSomeNumber >= 500 && inputSomeNumber < 800) {
-  discount = 0.03;
-} else if (inputSomeNumber >= 800) {
-  discount = 0.05;
+console.log(inputNumberDayWeek);
+
+switch (inputNumberDayWeek) {
+  case +"1":
+    dayWeek = "Понеділок";
+    break;
+  case +"2":
+    dayWeek = "Вівторок";
+    break;
+  case +"3":
+    dayWeek = "Середа";
+    break;
+  case +"4":
+    dayWeek = "Четвер";
+    break;
+  case +"5":
+    dayWeek = "П'ятниця";
+    break;
+  case +"6":
+    dayWeek = "Субота";
+    break;
+  case +"7":
+    dayWeek = "Неділя";
+    break;
+  default:
+    console.log("Дня з таким номером не існує!");
+    break;
 }
-
-// false, null, undefined, '', NaN, 0/-0 - falsy - значення
-if (inputSomeNumber > 0) {
-  console.log(
-    `Ваша сума товарів складає ${inputSomeNumber}, враховуючи знижку, яка складає ${
-      discount * 100
-    }% ваша сума буде дорівнювати ${
-      inputSomeNumber - inputSomeNumber * discount
-    }`
-  );
-} else if (inputSomeNumber === 0) {
-  // нічого не купили
-  console.log("Може бажаєте щось купити?");
-} else {
-  // наприклад, розбили певний товар в магазині
-  console.log("Сплатіть штраф !!!");
+if (inputNumberDayWeek <= 7 && inputNumberDayWeek >= 1) {
+  console.log(`Номер тижня ${inputNumberDayWeek} - ${dayWeek}`);
 }
