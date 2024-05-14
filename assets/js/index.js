@@ -20,7 +20,7 @@
 //   `<p class="${classForTheme}">${nameTheme} тема, зараз ${localHour} година</p>`
 // );
 
-//===============================================================================
+// //===============================================================================
 // console.log("// 2");
 // const isOnline = true;
 // const notificationsAboutOnline = !isOnline
@@ -29,7 +29,7 @@
 
 // alert(notificationsAboutOnline);
 
-//===============================================================================
+// //===============================================================================
 // console.log("// 3");
 // let inputSomeNumber = null;
 // let discount = null;
@@ -63,44 +63,101 @@
 //   console.log("Сплатіть штраф !!!");
 // }
 
-console.log("Завдання на switch..case");
-console.log("// 1");
+// //===============================================================================
+// console.log("Завдання на switch..case");
+// console.log("// 1");
 
-let inputNumberDayWeek = null;
-let dayWeek = null;
+// let inputNumberDayWeek = null;
+// let dayWeek = null;
+
+// do {
+//   inputNumberDayWeek = +prompt("Введіть номер дня тижня: ", "7");
+// } while (!Number.isFinite(inputNumberDayWeek));
+
+// console.log(inputNumberDayWeek);
+
+// switch (inputNumberDayWeek) {
+//   case +"1":
+//     dayWeek = "Понеділок";
+//     break;
+//   case +"2":
+//     dayWeek = "Вівторок";
+//     break;
+//   case +"3":
+//     dayWeek = "Середа";
+//     break;
+//   case +"4":
+//     dayWeek = "Четвер";
+//     break;
+//   case +"5":
+//     dayWeek = "П'ятниця";
+//     break;
+//   case +"6":
+//     dayWeek = "Субота";
+//     break;
+//   case +"7":
+//     dayWeek = "Неділя";
+//     break;
+//   default:
+//     console.log("Дня з таким номером не існує!");
+//     break;
+// }
+// if (inputNumberDayWeek <= 7 && inputNumberDayWeek >= 1) {
+//   console.log(`Номер дня тижня ${inputNumberDayWeek} - ${dayWeek}`);
+// }
+
+console.log("// 2");
+let inputNumberDayMonth = null;
+let decade = null;
 
 do {
-  inputNumberDayWeek = +prompt("Введіть номер дня тижня: ", "7");
-} while (!Number.isFinite(inputNumberDayWeek));
+  inputNumberDayMonth = +prompt("Введіть номер дня місяця: ", "24");
+} while (!Number.isFinite(inputNumberDayMonth));
 
-console.log(inputNumberDayWeek);
-
-switch (inputNumberDayWeek) {
+switch (inputNumberDayMonth) {
   case +"1":
-    dayWeek = "Понеділок";
-    break;
   case +"2":
-    dayWeek = "Вівторок";
-    break;
   case +"3":
-    dayWeek = "Середа";
-    break;
   case +"4":
-    dayWeek = "Четвер";
-    break;
   case +"5":
-    dayWeek = "П'ятниця";
-    break;
   case +"6":
-    dayWeek = "Субота";
-    break;
   case +"7":
-    dayWeek = "Неділя";
+  case +"8":
+  case +"9":
+  case +"10":
+    decade = "Першої ";
+    break;
+  case +"11":
+  case +"12":
+  case +"13":
+  case +"14":
+  case +"15":
+  case +"16":
+  case +"17":
+  case +"18":
+  case +"19":
+  case +"20":
+    decade = "Другої";
+    break;
+  case +"21":
+  case +"22":
+  case +"23":
+  case +"24":
+  case +"25":
+  case +"26":
+  case +"27":
+  case +"28":
+  case +"29":
+  case +"30":
+  case +"31":
+    decade = "Третьої";
     break;
   default:
-    console.log("Дня з таким номером не існує!");
-    break;
+    console.log("Немає такого числа в місяці!");
 }
-if (inputNumberDayWeek <= 7 && inputNumberDayWeek >= 1) {
-  console.log(`Номер тижня ${inputNumberDayWeek} - ${dayWeek}`);
+
+if (inputNumberDayMonth <= 31 && inputNumberDayMonth >= 1) {
+  console.log(
+    `Число ${inputNumberDayMonth} відноситься до - ${decade} декади місяця`
+  );
 }
