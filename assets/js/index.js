@@ -16,4 +16,15 @@ if (localHour >= 6 && localHour <= 21) {
   nameTheme = "Темна";
 }
 
-document.write(`<p class="${classForTheme}">${nameTheme} тема</p>`);
+document.write(
+  `<p class="${classForTheme}">${nameTheme} тема, зараз ${localHour} година</p>`
+);
+
+//===============================================================================
+console.log("// 2");
+const isOnline = true;
+const notificationsAboutOnline = !isOnline
+  ? "Ваше повідомлення буде відправлено при під'єднанні до мережі Інтернет"
+  : "Ви підключені до мережі Інтернет";
+
+alert(notificationsAboutOnline);
