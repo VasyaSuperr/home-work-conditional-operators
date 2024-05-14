@@ -64,6 +64,61 @@
 // }
 
 // //===============================================================================
+console.log("// 4");
+const isLogin = confirm("Ви увійшли в акаунт?");
+// console.log(isLogin);
+
+let isSpecifyTheGender = null;
+let = isMale = null;
+let = isFemale = null;
+
+if (isLogin) {
+  isSpecifyTheGender = confirm("Бажаєте вказати стать?");
+
+  if (isSpecifyTheGender) {
+    isMale = confirm("Ви чоловік?");
+  }
+
+  if (!isMale && isSpecifyTheGender) {
+    isFemale = confirm("Тобто ви жінка?");
+  }
+}
+
+document.write(` 
+<header class="top-navigation">
+    <a href="#"><img src="./assets/images/logo.png" alt="Company logo"></a>`);
+if (isLogin) {
+  let classForIsMale = null;
+  let linkImg = null;
+  let nameSurnameUser = null;
+
+  if (isMale) {
+    classForIsMale = "classIsMale";
+    linkImg = "./assets/images/Francisco.png";
+    nameSurnameUser = "Francisco Bell";
+  } else if (isFemale) {
+    classForIsMale = "classIsFemale";
+    linkImg = "./assets/images/Beth.png";
+    nameSurnameUser = "Beth Fox";
+  } else {
+    classForIsMale = "ClassIsAnonymus";
+    linkImg = "./assets/images/anonymus.jpeg";
+    nameSurnameUser = "Anonymus";
+  }
+
+  document.write(
+    `<p>${nameSurnameUser}</p>
+    <img class="same-properties ${classForIsMale}" src="${linkImg}" alt="User photo">`
+  );
+} else {
+  document.write(`
+    <button class="same-values">Login</button>
+    <button class="same-values">Register</button>`);
+}
+document.write(`
+</header>`);
+
+// //===============================================================================
 // console.log("Завдання на switch..case");
 // console.log("// 1");
 
@@ -106,58 +161,59 @@
 //   console.log(`Номер дня тижня ${inputNumberDayWeek} - ${dayWeek}`);
 // }
 
-console.log("// 2");
-let inputNumberDayMonth = null;
-let decade = null;
+// //===============================================================================
+// console.log("// 2");
+// let inputNumberDayMonth = null;
+// let decade = null;
 
-do {
-  inputNumberDayMonth = +prompt("Введіть номер дня місяця: ", "24");
-} while (!Number.isFinite(inputNumberDayMonth));
+// do {
+//   inputNumberDayMonth = +prompt("Введіть номер дня місяця: ", "24");
+// } while (!Number.isFinite(inputNumberDayMonth));
 
-switch (inputNumberDayMonth) {
-  case +"1":
-  case +"2":
-  case +"3":
-  case +"4":
-  case +"5":
-  case +"6":
-  case +"7":
-  case +"8":
-  case +"9":
-  case +"10":
-    decade = "Першої ";
-    break;
-  case +"11":
-  case +"12":
-  case +"13":
-  case +"14":
-  case +"15":
-  case +"16":
-  case +"17":
-  case +"18":
-  case +"19":
-  case +"20":
-    decade = "Другої";
-    break;
-  case +"21":
-  case +"22":
-  case +"23":
-  case +"24":
-  case +"25":
-  case +"26":
-  case +"27":
-  case +"28":
-  case +"29":
-  case +"30":
-  case +"31":
-    decade = "Третьої";
-    break;
-  default:
-    console.log("Немає такого числа в місяці!");
-}
+// switch (inputNumberDayMonth) {
+//   case +"1":
+//   case +"2":
+//   case +"3":
+//   case +"4":
+//   case +"5":
+//   case +"6":
+//   case +"7":
+//   case +"8":
+//   case +"9":
+//   case +"10":
+//     decade = "Першої ";
+//     break;
+//   case +"11":
+//   case +"12":
+//   case +"13":
+//   case +"14":
+//   case +"15":
+//   case +"16":
+//   case +"17":
+//   case +"18":
+//   case +"19":
+//   case +"20":
+//     decade = "Другої";
+//     break;
+//   case +"21":
+//   case +"22":
+//   case +"23":
+//   case +"24":
+//   case +"25":
+//   case +"26":
+//   case +"27":
+//   case +"28":
+//   case +"29":
+//   case +"30":
+//   case +"31":
+//     decade = "Третьої";
+//     break;
+//   default:
+//     console.log("Немає такого числа в місяці!");
+// }
 
-if (inputNumberDayMonth <= 31 && inputNumberDayMonth >= 1) {
-  console.log(
-    `Число ${inputNumberDayMonth} відноситься до - ${decade} декади місяця`
-  );
-}
+// if (inputNumberDayMonth <= 31 && inputNumberDayMonth >= 1) {
+//   console.log(
+//     `Число ${inputNumberDayMonth} відноситься до - ${decade} декади місяця`
+//   );
+// }

@@ -7,3 +7,47 @@
   background-color: #fffae1;
   color: black;
 }
+
+.top-navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.top-navigation a {
+  margin-right: auto;
+}
+
+.same-values {
+  background-color: chocolate;
+  font-size: 16px;
+  max-width: 100px;
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.same-values:hover {
+  background-color: #009cbf;
+}
+
+.same-properties {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.classIsMale {
+  border: 5px solid blue;
+}
+
+.classIsFemale {
+  border: 5px solid red;
+}
+
+.classIsAnonymus {
+  border: 5px solid green;
+}
